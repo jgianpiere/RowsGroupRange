@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plugin Group Range</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="./js/jQuery.RGR.ver1.0.alpha.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/bootstrap-theme.css">
+	<style>
+		.example.rgr{
+			width: 100%;
+		}
+		.example.rgr .content{
+
+		}
+		.example.rgr .content .grupos{
+
+		}
+		.example.rgr .content .grupos .grupo{
+			border: dashed 1px gray;
+			padding: 3px;
+			margin: 5px 0px 5px 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="range_area" class="example rgr">
+		<div class="content" style="padding:20px;margin:20px;">
+			
+            <div class="grupos">
+            	<!-- <div class="grupo" data-group="1">
+            		<div class="row">
+            			<label class="control-label col-xs-2">Grupo 01 rangos :</label>
+
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <label class="control-label col-separator"> - </label>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <span style="float:right;">x</span>
+            		</div>
+            		<div class="row">
+						<div class="form-group">
+							<div class="col-lg-12">
+		            			<hr />
+							</div>
+						</div>
+					</div>
+
+            		<div class="row">
+            			<div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <span>?</span>
+            		</div>
+
+            		<div class="row">
+            			<div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <span>?</span>
+            		</div>
+
+            	</div> -->
+
+            	<!-- <div class="freeitems" data-join="">
+            		<span><strong class="num">10</strong> items libres</span>
+            		<button>unir grupos</button>
+            		<button>crear rango</button>
+            	</div> -->
+
+            	<!-- <div class="grupo" data-group="2">
+            		<div class="row">
+            			<label class="control-label col-xs-2">Grupo 01 rangos :</label>
+
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <label class="control-label col-separator"> - </label>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <span style="float:right;">x</span>
+            		</div>
+            		<div class="row">
+						<div class="form-group">
+							<div class="col-lg-12">
+		            			<hr />
+							</div>
+						</div>
+					</div>
+
+            		<div class="row">
+            			<div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <span>?</span>
+            		</div>
+
+            		<div class="row">
+            			<div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <div class="col-lg-2">
+	                        <input type="text" class="form-control" id="" name="" placeholder="Documento">
+	                    </div>
+	                    <span>?</span>
+            		</div>
+
+            	</div> -->
+            </div>
+
+            <!-- <div class="newgrupo">
+        		<div class="row">
+        			<label class="control-label col-xs-2">New Rango:</label>
+        			<div class="col-lg-2">
+                        <input type="text" class="form-control" id="" name="" placeholder="">
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="text" class="form-control" id="" name="" placeholder="">
+                    </div>
+                    <button>Crear</button>
+        		</div>
+        	</div> -->
+ 
+            	<div class="endoptionrange" rangofinal>
+            		<label class="control-label col-xs-2">Rango Final Resultante:</label>
+            		<div class="col-lg-2">
+						<input type="text" class="form-control" id="" name="" placeholder="">
+	                </div>
+            		<label class="control-label col-xs-1">700</label>
+            		<label class="control-label col-xs-4">IMEI0000000000500 - IMEI0000000000700</label>
+	            	<span>»</span>
+            	</div>
+
+		</div>
+	</div>
+</body>
+<script>
+	// Template 
+	HTMLTemplate = {
+		valor : function(e,ui){
+
+		}
+	};
+
+	$('#range_area').RangeGroup({
+		Codigo		: ['IMEI','000000'],
+		MinRange 	: 10,
+		MaxRange 	: 100,
+		Theme		: 'example'
+	},HTMLTemplate);
+
+</script>
+</html>
